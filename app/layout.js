@@ -7,10 +7,10 @@ import ThemeToggle from '@/components/ThemeToggle';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display', weight: ['500', '600', '700'], display: 'swap' });
 
-const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalPorto","description":"Koleksi 7 template portfolio personal","url":"https://portal-porto.vercel.app","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://pintuweb.id"}};
+const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalPorto","description":"Koleksi 7 template portfolio personal","url":"https://porto.pintuweb.com","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://pintuweb.com"}};
 
 export const metadata = {
-  metadataBase: new URL("https://portal-porto.vercel.app"),
+  metadataBase: new URL("https://porto.pintuweb.com"),
   title: "PortalPorto — Galeri Portfolio Personal",
   description: "PortalPorto: koleksi 7 template portfolio personal dengan karakter berbeda — untuk desainer, developer, dan kreator.",
   applicationName: "PortalPorto",
@@ -18,11 +18,11 @@ export const metadata = {
   authors: [{ name: "PortalPorto" }],
   creator: "PortalPorto",
   publisher: "PortalPorto",
-  alternates: { canonical: "https://portal-porto.vercel.app" },
+  alternates: { canonical: "https://porto.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://portal-porto.vercel.app",
+    url: "https://porto.pintuweb.com",
     siteName: "PortalPorto",
     title: "PortalPorto — Galeri Portfolio Personal",
     description: "PortalPorto: koleksi 7 template portfolio personal dengan karakter berbeda — untuk desainer, developer, dan kreator.",
