@@ -7,9 +7,38 @@ import ThemeToggle from '@/components/ThemeToggle';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display', weight: ['500', '600', '700'], display: 'swap' });
 
+const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalPorto","description":"Koleksi 7 template portfolio personal","url":"https://portal-porto.vercel.app","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://pintuweb.id"}};
+
 export const metadata = {
-  title: `${site.name} — ${site.tagline}`,
-  description: site.description,
+  metadataBase: new URL("https://portal-porto.vercel.app"),
+  title: "PortalPorto — Galeri Portfolio Personal",
+  description: "PortalPorto: koleksi 7 template portfolio personal dengan karakter berbeda — untuk desainer, developer, dan kreator.",
+  applicationName: "PortalPorto",
+  keywords: ["template portfolio", "portfolio personal", "koleksi portfolio", "website portfolio"],
+  authors: [{ name: "PortalPorto" }],
+  creator: "PortalPorto",
+  publisher: "PortalPorto",
+  alternates: { canonical: "https://portal-porto.vercel.app" },
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://portal-porto.vercel.app",
+    siteName: "PortalPorto",
+    title: "PortalPorto — Galeri Portfolio Personal",
+    description: "PortalPorto: koleksi 7 template portfolio personal dengan karakter berbeda — untuk desainer, developer, dan kreator.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "PortalPorto — Galeri Portfolio Personal" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PortalPorto — Galeri Portfolio Personal",
+    description: "PortalPorto: koleksi 7 template portfolio personal dengan karakter berbeda — untuk desainer, developer, dan kreator.",
+    images: ["/og.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
 };
 
 const navLinks = [
@@ -78,7 +107,8 @@ export default function RootLayout({ children }) {
             </div>
           </footer>
         </ThemeProvider>
-      </body>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
+        </body>
     </html>
   );
 }
