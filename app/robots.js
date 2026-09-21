@@ -1,7 +1,7 @@
 export default function robots() {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://porto.pintuweb.com/sitemap.xml",
-    host: "https://porto.pintuweb.com",
+    sitemap: "https://portal-porto-neon.vercel.app/sitemap.xml",
+    host: "https://portal-porto-neon.vercel.app",
   };
 }
