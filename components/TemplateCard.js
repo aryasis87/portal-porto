@@ -4,7 +4,7 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 export default function TemplateCard({ template, onDetail }) {
   const { title, tagline, image, url, category, tags, comingSoon } = template;
-  const full = image.replace(/p(\d)\.png$/, 'f$1.png'); // gambar full-page panjang untuk scroll saat hover
+  const full = image.replace(/p(\d)\.png$/, 'f$1.webp'); // gambar full-page panjang untuk scroll saat hover
 
   return (
     <motion.div
