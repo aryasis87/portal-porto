@@ -4,7 +4,7 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 export default function TemplateCard({ template, onDetail }) {
   const { title, tagline, image, url, category, tags, comingSoon } = template;
-  const full = image.replace(/p(\d)\.png$/, 'f$1.webp'); // gambar full-page panjang untuk scroll saat hover
+  const full = image.replace(/p(\d)\.(png|webp)$/, 'f$1.webp'); // gambar full-page panjang untuk scroll saat hover
 
   return (
     <motion.div
@@ -21,7 +21,7 @@ export default function TemplateCard({ template, onDetail }) {
         <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
         <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
-        <span className="ml-3 truncate rounded-md bg-white px-3 py-1 text-[11px] text-gray-400 ring-1 ring-gray-100 dark:bg-white/5 dark:text-gray-500 dark:ring-white/10">
+        <span className="ml-3 truncate rounded-md bg-white px-3 py-1 text-[11px] text-gray-500 ring-1 ring-gray-100 dark:bg-white/5 dark:text-gray-400 dark:ring-white/10">
           {comingSoon ? `${title.toLowerCase()} · preview` : url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
         </span>
       </div>
