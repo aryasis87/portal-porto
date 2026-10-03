@@ -7,10 +7,10 @@ import ThemeToggle from '@/components/ThemeToggle';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display', weight: ['500', '600', '700'], display: 'swap' });
 
-const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalPorto","description":"Koleksi 7 template portfolio personal","url":"https://portal-porto-neon.vercel.app","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://www.pintuweb.com"}};
+const __jsonld = {"@context":"https://schema.org","@type":"CollectionPage","name":"PortalPorto","description":"Koleksi 7 template portfolio personal","url":"https://www.pintuweb.com/website-portofolio","isPartOf":{"@type":"WebSite","name":"PintuWeb","url":"https://www.pintuweb.com"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PintuWeb","item":"https://www.pintuweb.com"},{"@type":"ListItem","position":2,"name":"Website Portofolio","item":"https://www.pintuweb.com/website-portofolio"}]}};
 
 export const metadata = {
-  metadataBase: new URL("https://portal-porto-neon.vercel.app"),
+  metadataBase: new URL("https://www.pintuweb.com/website-portofolio"),
   title: "PortalPorto — Galeri Portfolio Personal",
   description: "PortalPorto: koleksi 7 template portfolio personal dengan karakter berbeda — untuk desainer, developer, dan kreator.",
   applicationName: "PortalPorto",
@@ -18,11 +18,11 @@ export const metadata = {
   authors: [{ name: "PortalPorto" }],
   creator: "PortalPorto",
   publisher: "PortalPorto",
-  alternates: { canonical: "https://portal-porto-neon.vercel.app" },
+  alternates: { canonical: "https://www.pintuweb.com/website-portofolio" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://portal-porto-neon.vercel.app",
+    url: "https://www.pintuweb.com/website-portofolio",
     siteName: "PortalPorto",
     title: "PortalPorto — Galeri Portfolio Personal",
     description: "PortalPorto: koleksi 7 template portfolio personal dengan karakter berbeda — untuk desainer, developer, dan kreator.",
@@ -53,6 +53,14 @@ export default function RootLayout({ children }) {
     <html lang="id" suppressHydrationWarning>
       <body className={`${inter.className} ${spaceGrotesk.variable} bg-gray-50 text-gray-900 antialiased transition-colors dark:bg-[#0a0a12] dark:text-gray-100`}>
         <ThemeProvider>
+          {/* Jejak: portal ini bagian dari PintuWeb */}
+          <nav aria-label="Jejak" className="bg-gray-900 text-gray-100 text-xs">
+            <ol className="mx-auto flex max-w-7xl px-4 sm:px-6 lg:px-8 items-center gap-2 py-1.5">
+              <li><a href="https://www.pintuweb.com" className="font-semibold underline-offset-4 hover:underline">PintuWeb</a></li>
+              <li aria-hidden="true" className="opacity-60">/</li>
+              <li aria-current="page">Website Portofolio</li>
+            </ol>
+          </nav>
           {/* Top bar */}
           <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur-xl dark:border-white/10 dark:bg-[#0a0a12]/80">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">

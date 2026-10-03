@@ -59,13 +59,13 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <div className="animate-float row-span-2 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-white/10 dark:bg-white/5">
-              <div className="relative h-full min-h-[260px] w-full"><Image src="/templates/p5.webp" alt="Template Rex" fill sizes="(max-width:1024px) 50vw, 280px" className="object-cover object-top" /></div>
+              <div className="relative h-full min-h-[260px] w-full"><Image src="/website-portofolio/templates/p5.webp" alt="Template Rex" fill sizes="(max-width:1024px) 50vw, 280px" className="object-cover object-top" /></div>
             </div>
             <div className="animate-float overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl [animation-delay:0.6s] dark:border-white/10 dark:bg-white/5">
-              <div className="relative aspect-[16/11] w-full"><Image src="/templates/p4.webp" alt="Template Aria" fill sizes="(max-width:1024px) 50vw, 240px" className="object-cover object-top" /></div>
+              <div className="relative aspect-[16/11] w-full"><Image src="/website-portofolio/templates/p4.webp" alt="Template Aria" fill sizes="(max-width:1024px) 50vw, 240px" className="object-cover object-top" /></div>
             </div>
             <div className="animate-float overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl [animation-delay:1.2s] dark:border-white/10 dark:bg-white/5">
-              <div className="relative aspect-[16/11] w-full"><Image src="/templates/p7.webp" alt="Template Milo" fill sizes="(max-width:1024px) 50vw, 240px" className="object-cover object-top" /></div>
+              <div className="relative aspect-[16/11] w-full"><Image src="/website-portofolio/templates/p7.webp" alt="Template Milo" fill sizes="(max-width:1024px) 50vw, 240px" className="object-cover object-top" /></div>
             </div>
           </div>
         </div>

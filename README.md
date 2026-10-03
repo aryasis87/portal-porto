@@ -2,7 +2,7 @@
 
 PortalPorto: koleksi 7 template portfolio personal dengan karakter berbeda — untuk desainer, developer, dan kreator.
 
-**Demo live:** https://portal-porto-neon.vercel.app
+**Demo live:** https://www.pintuweb.com/website-portofolio
 
 ![Tangkapan layar PortalPorto](public/og.jpg)
 
