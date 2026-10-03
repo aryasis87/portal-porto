@@ -1,9 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { ArrowTopRightOnSquareIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 export default function TemplateCard({ template, onDetail }) {
-  const { title, tagline, image, url, category, tags, comingSoon } = template;
+  const { title, tagline, image, url, category, tags, comingSoon, terjual } = template;
   const full = image.replace(/p(\d)\.(png|webp)$/, 'f$1.webp'); // gambar full-page panjang untuk scroll saat hover
 
   return (
@@ -58,6 +58,11 @@ export default function TemplateCard({ template, onDetail }) {
           )}
         </div>
         <div className="mt-3 flex flex-wrap gap-2">
+          {terjual > 0 && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300">
+              <ShoppingBagIcon className="h-3.5 w-3.5" aria-hidden="true" /> {terjual} terjual
+            </span>
+          )}
           {tags.map((t) => (
             <span key={t} className="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 dark:bg-white/10 dark:text-gray-300">{t}</span>
           ))}

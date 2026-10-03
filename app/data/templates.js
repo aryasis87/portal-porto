@@ -12,6 +12,7 @@ const HALAMAN = ['Beranda', 'Tentang', 'Karya', '6 studi kasus', 'Blog', '3 arti
 const templates = [
   {
     id: 'noelle',
+    terjual: 0,
     title: 'Noelle',
     tagline: 'Minimal editorial — desainer UI/UX',
     image: '/templates/p1.webp',
@@ -24,6 +25,7 @@ const templates = [
   },
   {
     id: 'carlos',
+    terjual: 7,
     title: 'Carlos',
     tagline: 'Gelap tegas — desainer & developer',
     image: '/templates/p2.webp',
@@ -36,6 +38,7 @@ const templates = [
   },
   {
     id: 'sorelle',
+    terjual: 3,
     title: 'Sorelle',
     tagline: 'Ceria & hangat — desainer UI/UX',
     image: '/templates/p3.webp',
@@ -48,6 +51,7 @@ const templates = [
   },
   {
     id: 'aria',
+    terjual: 2,
     title: 'Aria',
     tagline: 'Glassmorphism — creative developer',
     image: '/templates/p4.webp',
@@ -60,6 +64,7 @@ const templates = [
   },
   {
     id: 'rex',
+    terjual: 0,
     title: 'Rex',
     tagline: 'Neo-brutalis — tegas & lantang',
     image: '/templates/p5.webp',
@@ -72,6 +77,7 @@ const templates = [
   },
   {
     id: 'celeste',
+    terjual: 4,
     title: 'Celeste',
     tagline: 'Editorial serif — hangat & elegan',
     image: '/templates/p6.webp',
@@ -84,6 +90,7 @@ const templates = [
   },
   {
     id: 'milo',
+    terjual: 1,
     title: 'Milo',
     tagline: 'Bento ceria — cerah & ramah',
     image: '/templates/p7.webp',

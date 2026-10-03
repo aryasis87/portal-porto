@@ -30,6 +30,7 @@ export default function HomePage() {
       return okCat && okQ;
     });
     if (sort === 'az') r = [...r].sort((a, b) => a.title.localeCompare(b.title));
+    if (sort === 'laris') r = [...r].sort((a, b) => b.terjual - a.terjual);
     return r;
   }, [query, cat, sort]);
 
@@ -134,6 +135,7 @@ export default function HomePage() {
               Urutkan:
               <select value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 outline-none focus:border-indigo-400 dark:border-white/15 dark:bg-[#12121c] dark:text-gray-200">
                 <option value="featured">Pilihan</option>
+                <option value="laris">Terlaris</option>
                 <option value="az">Nama A–Z</option>
               </select>
             </label>
@@ -247,7 +249,7 @@ export default function HomePage() {
                 <button onClick={() => setActive(null)} aria-label="Tutup" className="absolute right-3 top-3 rounded-full bg-white/90 p-2 text-gray-700 hover:text-gray-900"><XMarkIcon className="h-5 w-5" /></button>
               </div>
               <div className="p-7">
-                <span className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{active.category}</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">{active.category}{active.terjual > 0 && ` · ${active.terjual} terjual`}</span>
                 <h3 className="mt-1 text-2xl font-bold text-gray-900 dark:text-white">{active.title}</h3>
                 <p className="mt-2 text-gray-600 dark:text-gray-400">{active.desc}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
